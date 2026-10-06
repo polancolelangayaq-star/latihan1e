@@ -246,226 +246,50 @@ button[type="reset"]:hover{
 }
 
 /* =========================================================
-   RESPONSIVE HP
-   Maksimal 599px
+   RESPONSIVE TABLET
+   Mulai dari lebar layar 600px
 ========================================================= */
 
-@media (max-width: 599px) {
-
-    body {
-        padding: 8px;
-        font-size: 14px;
-        overflow-x: hidden;
-    }
+@media (min-width: 600px) {
 
     .container {
-        width: 100%;
-        border-radius: 15px;
+        grid-area: 1 / span 6;
     }
-
-    .container > *:not(h1) {
-        padding-left: 12px;
-        padding-right: 12px;
-    }
-
-    h1 {
-        padding: 22px 10px;
-        font-size: clamp(21px, 7vw, 28px);
-    }
-
-    .unimor {
-        font-size: 12px;
-    }
-
-    h2 {
-        font-size: 19px;
-        margin-top: 20px;
-    }
-
-    p {
-        font-size: 14px;
-        line-height: 1.7;
-        text-align: left;
-    }
-
-    hr {
-        margin: 18px 12px;
-    }
-
-
-    /* =====================================================
-       IDENTITAS HP
-       FOTO + DATA TETAP BERDAMPINGAN
-    ===================================================== */
-
-    .Identitas {
-        width: calc(100% - 20px) !important;
-        margin: 0 10px !important;
-        border-spacing: 5px !important;
-        table-layout: fixed !important;
-    }
-
-    .Identitas > tr {
-        display: table-row !important;
-    }
-
-    .Identitas > tr > td {
-        display: table-cell !important;
-        vertical-align: top !important;
-    }
-
-    .Kolom-Foto {
-        width: 32% !important;
-        padding: 3px !important;
-    }
-
-    .Kolom-Foto img {
-        width: 90px;
-        height: 120px;
-        max-width: 100%;
-        border-width: 3px;
-        border-radius: 10px;
-    }
-
-    .Identitas > tr > td:nth-child(2) {
-        width: 68% !important;
-        padding: 3px !important;
-    }
-
-    .Identitas > tr > td:nth-child(2) h2 {
-        font-size: 17px;
-        margin: 2px 0 7px;
-        padding-left: 6px;
-        border-left-width: 3px;
-    }
-
-    .Identitas > tr > td:nth-child(2) > table {
-        width: 100%;
-        table-layout: fixed;
-    }
-
-    .Identitas > tr > td:nth-child(2) > table td {
-        padding: 3px 1px;
-        font-size: 10px;
-        line-height: 1.35;
-        overflow-wrap: anywhere;
-        word-break: normal;
-    }
-
-    .Identitas > tr > td:nth-child(2) > table td:first-child {
-        width: 38%;
-    }
-
-    .Identitas > tr > td:nth-child(2) > table td:nth-child(2) {
-        width: 5%;
-    }
-
-    .Identitas > tr > td:nth-child(2) > table td:nth-child(3) {
-        width: 57%;
-    }
-
-
-    /* =====================================================
-       GRID INFORMASI HP
-    ===================================================== */
 
     .grid-informasi {
-        grid-template-columns: 1fr;
-        gap: 15px;
-        margin-top: 15px;
+        grid-area: 2 / span 4;
     }
-
-    .card {
-        width: 100%;
-        padding: 16px;
-        border-radius: 15px;
-    }
-
-    .card:hover {
-        transform: none;
-    }
-
-    .card h2 {
-        margin-top: 0;
-        font-size: 19px;
-    }
-
-    .card li {
-        font-size: 14px;
-        padding: 4px 0;
-    }
-
-
-    /* =====================================================
-       TABEL MATA KULIAH HP
-    ===================================================== */
 
     .tabel-matakuliah {
-        display: block;
-        width: calc(100% - 20px);
-        margin: 0 10px;
-        overflow-x: auto;
-        white-space: nowrap;
-        -webkit-overflow-scrolling: touch;
+        grid-area: 3 / span 6;
     }
-
-    .tabel-matakuliah th,
-    .tabel-matakuliah td {
-        padding: 9px 10px;
-        font-size: 12px;
-    }
-
-
-    /* =====================================================
-       FORM HP
-    ===================================================== */
 
     #formkontak {
-        width: calc(100% - 20px);
-        margin: 0 10px;
-        padding: 16px;
-        border-radius: 15px;
+        grid-area: 4 / span 6;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE LAPTOP / DESKTOP
+   Mulai dari lebar layar 768px
+========================================================= */
+
+@media (min-width: 768px) {
+
+    .container {
+        grid-area: 1 / span 6;
     }
 
-    #formkontak > div {
-        width: 100%;
-        margin-bottom: 15px;
+    .grid-informasi {
+        grid-area: 2 / span 4;
     }
 
-    #formkontak label {
-        font-size: 14px;
+    .tabel-matakuliah {
+        grid-area: 2 / span 1;
     }
 
-    #formkontak input,
-    #formkontak select,
-    #formkontak textarea {
-        width: 100%;
-        min-width: 0;
-        padding: 11px;
-        font-size: 16px;
-        border-radius: 9px;
-    }
-
-    #formkontak textarea {
-        min-height: 120px;
-    }
-
-    #formkontak button {
-        display: block;
-        width: 100%;
-        margin: 8px 0 0;
-        padding: 12px;
-        font-size: 15px;
-    }
-
-
-    /* =====================================================
-       FOOTER
-    ===================================================== */
-
-    .container p:last-child,
-    .container p:nth-last-child(2) {
-        font-size: 12px;
-        text-align: center;
+    #formkontak {
+        grid-area: 3 / span 6;
     }
 }
