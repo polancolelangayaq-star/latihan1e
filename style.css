@@ -282,3 +282,209 @@ button[type="reset"]:hover{
     }
 }
 
+```css
+/* ================================
+   RESPONSIVE UNTUK HP Maksimal lebar 720px
+================================ */
+@media (max-width: 720px) {
+
+    /* Body */
+    body {
+        padding: 10px;
+        font-size: 15px;
+    }
+
+    /* Container utama */
+    .container {
+        width: 100%;
+        max-width: 100%;
+        border-radius: 15px;
+    }
+
+    /* Padding isi container */
+    .container > *:not(h1) {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    /* Judul */
+    h1 {
+        font-size: 25px;
+        line-height: 1.3;
+        padding: 25px 15px;
+        letter-spacing: 1px;
+    }
+
+    /* Subjudul */
+    .unimor {
+        font-size: 14px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+
+    /* ================================
+       IDENTITAS
+    ================================= */
+
+    .Identitas,
+    .Identitas tbody,
+    .Identitas tr,
+    .Identitas td {
+        display: block;
+        width: 100%;
+    }
+
+    .Identitas {
+        padding: 15px;
+        border-spacing: 0;
+    }
+
+    .Identitas td {
+        text-align: left;
+        padding: 5px;
+    }
+
+    /* Foto */
+    .Kolom-Foto {
+        text-align: center !important;
+        margin-bottom: 20px;
+    }
+
+    .Kolom-Foto img {
+        width: 160px;
+        height: 200px;
+        max-width: 100%;
+    }
+
+
+    /* ================================
+       CARD INFORMASI
+    ================================= */
+
+    .grid-informasi {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .card {
+        padding: 18px;
+    }
+
+
+    /* ================================
+       TABEL MATA KULIAH
+    ================================= */
+
+    .tabel-matakuliah {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    .tabel-matakuliah th,
+    .tabel-matakuliah td {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+
+    /* ================================
+       FORM KONTAK
+    ================================= */
+
+    form {
+        padding: 18px;
+    }
+
+    input,
+    select,
+    textarea {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        font-size: 16px;
+    }
+
+    /* Tombol */
+    button {
+        width: 100%;
+        margin-top: 8px;
+        box-sizing: border-box;
+    }
+
+
+    /* ================================
+       PARAGRAF
+    ================================= */
+
+    p {
+        text-align: left;
+        word-wrap: break-word;
+    }
+
+
+    /* ================================
+       LINK
+    ================================= */
+
+    a {
+        word-break: break-word;
+    }
+}
+
+
+/* ================================
+   HP KECIL Contoh: 320px - 480px
+================================ */
+@media (max-width: 480px) {
+
+    body {
+        padding: 5px;
+        font-size: 14px;
+    }
+
+    .container {
+        border-radius: 10px;
+    }
+
+    .container > *:not(h1) {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    h1 {
+        font-size: 21px;
+        padding: 20px 10px;
+    }
+
+    .unimor {
+        font-size: 13px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    .Kolom-Foto img {
+        width: 140px;
+        height: 180px;
+    }
+
+    .card {
+        padding: 15px;
+    }
+
+    form {
+        padding: 15px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 12px;
+    }
+}
+```
