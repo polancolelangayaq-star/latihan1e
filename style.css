@@ -283,208 +283,350 @@ button[type="reset"]:hover{
 }
 
 ```css
-/* ================================
-   RESPONSIVE UNTUK HP Maksimal lebar 720px
-================================ */
+/* =========================================================
+   RESPONSIVE MOBILE
+   Untuk HP dengan ukuran layar sampai 720px
+========================================================= */
+
 @media (max-width: 720px) {
 
-    /* Body */
+    /* =====================================================
+       BODY
+    ===================================================== */
+
     body {
-        padding: 10px;
-        font-size: 15px;
+        padding: 8px;
+        margin: 0;
+        font-size: 14px;
+        line-height: 1.6;
+        overflow-x: hidden;
     }
 
-    /* Container utama */
+
+    /* =====================================================
+       CONTAINER UTAMA
+    ===================================================== */
+
     .container {
         width: 100%;
         max-width: 100%;
+        margin: 0 auto;
         border-radius: 15px;
+        overflow: hidden;
     }
 
-    /* Padding isi container */
     .container > *:not(h1) {
-        padding-left: 15px;
-        padding-right: 15px;
+        padding-left: 12px;
+        padding-right: 12px;
     }
 
-    /* Judul */
+
+    /* =====================================================
+       JUDUL CV
+    ===================================================== */
+
     h1 {
-        font-size: 25px;
+        font-size: clamp(21px, 6vw, 28px);
         line-height: 1.3;
-        padding: 25px 15px;
+        padding: 22px 10px;
+        margin: 0;
         letter-spacing: 1px;
+        text-align: center;
     }
 
-    /* Subjudul */
     .unimor {
-        font-size: 14px;
+        font-size: clamp(12px, 3.5vw, 15px);
+        margin-top: 8px;
+        line-height: 1.4;
     }
+
+
+    /* =====================================================
+       HEADING / JUDUL BAGIAN
+    ===================================================== */
 
     h2 {
-        font-size: 20px;
+        font-size: clamp(18px, 5vw, 21px);
+        line-height: 1.4;
+        margin-top: 20px;
+        margin-bottom: 12px;
     }
 
 
-    /* ================================
+    /* =====================================================
+       GARIS PEMISAH
+    ===================================================== */
+
+    hr {
+        margin: 18px 0;
+    }
+
+
+    /* =====================================================
        IDENTITAS
-    ================================= */
-
-    .Identitas,
-    .Identitas tbody,
-    .Identitas tr,
-    .Identitas td {
-        display: block;
-        width: 100%;
-    }
+       
+       FOTO DAN DATA TETAP BERDAMPINGAN
+    ===================================================== */
 
     .Identitas {
-        padding: 15px;
-        border-spacing: 0;
+        width: 100%;
+        margin: 0;
+        padding: 8px;
+        border-spacing: 5px;
+        table-layout: fixed;
+        background: #f8fbff;
     }
 
-    .Identitas td {
-        text-align: left;
-        padding: 5px;
+    /* Jangan ubah menjadi block */
+    .Identitas tr {
+        display: table-row;
     }
 
-    /* Foto */
+    /* Kolom utama tetap horizontal */
+    .Identitas > tbody > tr > td {
+        display: table-cell;
+        vertical-align: top;
+        padding: 4px;
+    }
+
+
+    /* =====================================================
+       KOLOM FOTO
+    ===================================================== */
+
     .Kolom-Foto {
+        width: 32%;
         text-align: center !important;
-        margin-bottom: 20px;
+        vertical-align: top;
     }
 
     .Kolom-Foto img {
-        width: 160px;
-        height: 200px;
+        width: clamp(85px, 27vw, 150px);
+        height: clamp(110px, 35vw, 190px);
         max-width: 100%;
+        object-fit: cover;
+        border-radius: 12px;
+        border: 4px solid white;
+        box-shadow: 0 5px 15px rgba(37, 99, 235, 0.2);
     }
 
 
-    /* ================================
-       CARD INFORMASI
-    ================================= */
+    /* =====================================================
+       KOLOM DATA IDENTITAS
+    ===================================================== */
 
-    .grid-informasi {
-        grid-template-columns: 1fr;
-        gap: 15px;
+    .Identitas > tbody > tr > td:nth-child(2) {
+        width: 68%;
+        text-align: left;
+        vertical-align: top;
     }
 
-    .card {
-        padding: 18px;
+    /* Judul Identitas Diri */
+    .Identitas > tbody > tr > td:nth-child(2) h2 {
+        font-size: clamp(16px, 4.5vw, 21px);
+        margin: 3px 0 8px;
+        padding-left: 7px;
+        border-left-width: 3px;
     }
 
 
-    /* ================================
-       TABEL MATA KULIAH
-    ================================= */
+    /* =====================================================
+       TABEL DATA IDENTITAS
+    ===================================================== */
 
-    .tabel-matakuliah {
-        display: block;
+    .Identitas > tbody > tr > td:nth-child(2) table {
         width: 100%;
-        overflow-x: auto;
-        white-space: nowrap;
+        border-spacing: 0;
+        table-layout: fixed;
     }
 
-    .tabel-matakuliah th,
-    .tabel-matakuliah td {
-        padding: 10px;
-        font-size: 14px;
+    .Identitas > tbody > tr > td:nth-child(2) table td {
+        padding: 3px 2px;
+        font-size: clamp(10px, 2.7vw, 14px);
+        line-height: 1.4;
+        vertical-align: top;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
     }
 
-
-    /* ================================
-       FORM KONTAK
-    ================================= */
-
-    form {
-        padding: 18px;
+    /* Nama field */
+    .Identitas > tbody > tr > td:nth-child(2) table td:first-child {
+        width: 40%;
     }
 
-    input,
-    select,
-    textarea {
-        width: 100%;
-        max-width: 100%;
-        box-sizing: border-box;
-        font-size: 16px;
+    /* Titik dua */
+    .Identitas > tbody > tr > td:nth-child(2) table td:nth-child(2) {
+        width: 5%;
+        text-align: center;
     }
 
-    /* Tombol */
-    button {
-        width: 100%;
-        margin-top: 8px;
-        box-sizing: border-box;
+    /* Isi data */
+    .Identitas > tbody > tr > td:nth-child(2) table td:nth-child(3) {
+        width: 55%;
     }
 
 
-    /* ================================
-       PARAGRAF
-    ================================= */
+    /* =====================================================
+       PROFIL SINGKAT
+    ===================================================== */
 
     p {
+        font-size: 14px;
+        line-height: 1.7;
         text-align: left;
+        overflow-wrap: break-word;
         word-wrap: break-word;
     }
 
 
-    /* ================================
-       LINK
-    ================================= */
+    /* =====================================================
+       GRID INFORMASI
+       Pendidikan - Hobi - Bidang Minat
+    ===================================================== */
 
-    a {
-        word-break: break-word;
+    .grid-informasi {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 15px;
+        margin-top: 15px;
     }
-}
 
 
-/* ================================
-   HP KECIL Contoh: 320px - 480px
-================================ */
-@media (max-width: 480px) {
+    /* =====================================================
+       CARD
+    ===================================================== */
 
-    body {
-        padding: 5px;
+    .card {
+        width: 100%;
+        padding: 16px;
+        box-sizing: border-box;
+        border-radius: 15px;
+    }
+
+    .card h2 {
+        margin-top: 0;
+        font-size: 19px;
+    }
+
+    .card ul,
+    .card ol {
+        padding-left: 20px;
+        margin-left: 0;
+    }
+
+    .card li {
         font-size: 14px;
+        padding: 5px 0;
     }
 
-    .container {
+
+    /* =====================================================
+       TABEL MATA KULIAH
+    ===================================================== */
+
+    .tabel-matakuliah {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        overflow-x: auto;
+        white-space: nowrap;
         border-radius: 10px;
+        -webkit-overflow-scrolling: touch;
     }
 
-    .container > *:not(h1) {
-        padding-left: 10px;
-        padding-right: 10px;
-    }
-
-    h1 {
-        font-size: 21px;
-        padding: 20px 10px;
-    }
-
-    .unimor {
+    .tabel-matakuliah th,
+    .tabel-matakuliah td {
+        padding: 9px 10px;
         font-size: 13px;
     }
 
-    h2 {
-        font-size: 18px;
+
+    /* =====================================================
+       LINK
+    ===================================================== */
+
+    a {
+        word-break: break-word;
+        overflow-wrap: break-word;
     }
 
-    .Kolom-Foto img {
-        width: 140px;
-        height: 180px;
+
+    /* =====================================================
+       FORM KONTAK
+    ===================================================== */
+
+    #formkontak {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 16px;
+        margin: 0;
+        border-radius: 15px;
     }
 
-    .card {
-        padding: 15px;
+    #formkontak > div {
+        width: 100%;
+        margin-bottom: 15px;
     }
 
-    form {
-        padding: 15px;
-    }
 
-    button {
+    /* =====================================================
+       LABEL
+    ===================================================== */
+
+    #formkontak label {
+        display: block;
+        margin-bottom: 6px;
         font-size: 14px;
+        font-weight: 600;
+    }
+
+
+    /* =====================================================
+       INPUT, SELECT, TEXTAREA
+    ===================================================== */
+
+    #formkontak input,
+    #formkontak select,
+    #formkontak textarea {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+        font-size: 16px;
+        padding: 11px;
+        border-radius: 9px;
+    }
+
+    #formkontak textarea {
+        min-height: 120px;
+        resize: vertical;
+    }
+
+
+    /* =====================================================
+       BUTTON
+    ===================================================== */
+
+    #formkontak button {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+        margin-top: 8px;
         padding: 12px;
+        font-size: 15px;
+        border-radius: 9px;
+    }
+
+
+    /* =====================================================
+       FOOTER
+    ===================================================== */
+
+    .container p:last-child,
+    .container p:nth-last-child(2) {
+        font-size: 13px;
+        text-align: center;
+        line-height: 1.5;
     }
 }
-```
