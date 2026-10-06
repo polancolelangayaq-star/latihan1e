@@ -247,7 +247,7 @@ button[type="reset"]:hover{
 
 
 /* ==========================================
-   2. TAMPILAN DESKTOP (768px)
+    TAMPILAN DESKTOP (768px)
    ========================================== */
 @media(max-width:768px){
 
@@ -282,3 +282,81 @@ button[type="reset"]:hover{
     }
 }
 
+/* =====================================================
+   RESPONSIVE TABLET & LAPTOP
+   Sesuai dengan class pada HTML
+===================================================== */
+
+@media (min-width: 600px) {
+
+    /* Container utama */
+    .container {
+        width: 95%;
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+
+    /* Judul CV */
+    .container > h1 {
+        grid-area: header;
+    }
+
+    /* Identitas */
+    .Identitas {
+        grid-area: identitas;
+        width: 100%;
+    }
+
+    /* Foto */
+    .Kolom-Foto {
+        width: 30%;
+    }
+
+    /* Informasi identitas */
+    .Identitas td:nth-child(2) {
+        width: 70%;
+    }
+
+    /* =================================================
+       GRID INFORMASI
+       Pendidikan | Hobi | Bidang Minat
+    ================================================= */
+
+    .grid-informasi {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        width: 100%;
+    }
+
+    .card {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* =================================================
+       TABEL MATA KULIAH
+    ================================================= */
+
+    .tabel-matakuliah {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    /* =================================================
+       FORM KONTAK
+    ================================================= */
+
+    #formkontak {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    #formkontak input,
+    #formkontak select,
+    #formkontak textarea {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+}
