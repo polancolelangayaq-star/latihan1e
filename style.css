@@ -247,10 +247,10 @@ button[type="reset"]:hover{
 
 /* =========================================================
    RESPONSIVE TABLET
-   Mulai dari lebar layar 600px
+   Mulai dari lebar layar 1600px
 ========================================================= */
 
-@media (min-width: 600px) {
+@media (min-width: 1600px) {
 
     .container {
         grid-area: 1 / span 6;
