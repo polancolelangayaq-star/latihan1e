@@ -315,7 +315,7 @@ button[type="reset"]:hover{
 /* ==========================================
    2. TAMPILAN HP / MOBILE (<= 600px)
    ========================================== */
-@media (max-width: 600px) {
+@media (max-width: 300px) {
     body {
         padding: 12px;
     }
