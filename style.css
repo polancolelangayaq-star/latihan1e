@@ -285,10 +285,10 @@ button[type="reset"]:hover{
 ```css
 /* =========================================================
    RESPONSIVE MOBILE
-   Untuk HP dengan ukuran layar sampai 720px
+   Untuk HP dengan ukuran layar sampai 700px
 ========================================================= */
 
-@media (max-width: 720px) {
+@media (max-width: 700px) {
 
     /* =====================================================
        BODY
