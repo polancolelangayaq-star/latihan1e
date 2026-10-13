@@ -250,21 +250,28 @@ button[type="reset"]:hover{
    RESPONSIVE  Mulai dari lebar layar 768px
 ========================================================= */
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
+    body {
+        padding: 10px; /* Padding dikurangi agar pas di layar HP */
+    }
 
     .container {
-        grid-area: 1 / span 6;
+        width: 100%;
+        padding: 15px;
+        border-radius: 10px;
     }
 
+    /* Mengubah grid menjadi 1 kolom ke bawah secara vertikal */
     .grid-informasi {
-        grid-area: 2 / span 4;
+        grid-template-columns: 1fr; 
     }
 
-    .tabel-matakuliah {
-        grid-area: 2 / span 1;
+    /* Menyesuaikan ukuran teks atau elemen lain jika perlu */
+    h1 {
+        font-size: 24px;
     }
-
-    #formkontak {
-        grid-area: 3 / span 6;
+    
+    p {
+        font-size: 14px;
     }
 }
