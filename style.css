@@ -322,7 +322,7 @@ button[type="reset"]:hover{
         padding: 15px;
     }
 }
-.tabel-matakuliah-container {
+.tabel-matakuliah{
         width: 100%;
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
