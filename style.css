@@ -238,13 +238,13 @@ button[type="submit"]{
 }
 
 button[type="submit"]:hover{
-    background:#1d4ed8;
+    background:#cbd5e1;
     transform:translateY(-3px);
 }
 
 button[type="reset"]{
-    background:#e2e8f0;
-    color:#334155;
+    background:#2563eb;
+    color:white;
 }
 
 button[type="reset"]:hover{
