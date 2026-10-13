@@ -268,3 +268,9 @@ button[type="reset"]:hover{
         grid-area: 3 / span 6;
     }
 }
+
+@media (max-width: 600px) {
+  .container {
+    flex-direction: column;
+  }
+}
