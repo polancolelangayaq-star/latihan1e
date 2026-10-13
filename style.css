@@ -250,7 +250,7 @@ button[type="reset"]:hover{
    RESPONSIVE  Mulai dari lebar layar 768px
 ========================================================= */
 
-@media (min-width: 768px) {
+@media (max-width: 600px) {
 
     .container {
         grid-area: 1 / span 6;
@@ -267,10 +267,4 @@ button[type="reset"]:hover{
     #formkontak {
         grid-area: 3 / span 6;
     }
-}
-
-@media (max-width: 600px) {
-  .container {
-    flex-direction: column;
-  }
 }
