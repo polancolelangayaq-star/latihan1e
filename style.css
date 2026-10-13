@@ -141,7 +141,7 @@ li:hover{
 }
 
 .tabel-matakuliah{
-    width:100%;
+    width:90%;
     min-width: 450px; /* Mencegah tabel tertekan terlalu kecil */
     border-collapse:collapse;
     overflow:hidden;
@@ -152,7 +152,7 @@ li:hover{
 .tabel-matakuliah th{
     background:#2563eb;
     color:white;
-    padding:12px;
+    padding:10px;
     font-size: 14px;
 }
 
@@ -261,7 +261,7 @@ button[type="reset"]:hover{
 /* =========================================================
    RESPONSIVE DESIGN KHUSUS HP (ANDROID / IPHONE)
 ========================================================= */
-@media (max-width: 768px) {
+@media (max-width: 600px) {
     body {
         padding: 5px; /* Margin luar sangat tipis agar layar HP terpakai optimal */
     }
