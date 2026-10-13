@@ -141,7 +141,7 @@ li:hover{
 }
 
 .tabel-matakuliah{
-    width:90%;
+    width:100%;
     min-width: 450px; /* Mencegah tabel tertekan terlalu kecil */
     border-collapse:collapse;
     overflow:hidden;
@@ -320,5 +320,17 @@ button[type="reset"]:hover{
     }
     form {
         padding: 15px;
+    }
+}
+.tabel-matakuliah-container {
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        margin-bottom: 15px;
+    }
+
+    .tabel-matakuliah {
+        width: 100%;
+        max-width: 100%;
     }
 }
